@@ -13,7 +13,7 @@
             DateTime horaDia = DateTime.Parse(hora, System.Globalization.CultureInfo.CurrentCulture); //cambio del string de la hora a tiempo se debe mantener un solo contexto
             string t = horaDia.ToString("HH:mm:ss tt"); //ejemplo de como se ve la hora para usar dentro de una ventana emergente
             var parsedDate = DateTime.Parse(fechaIngresada); //cambia a datetime la fecha del string se debe usar un solo formato
-            int result = DateTime.Compare(horadia1, horaDia); // resultado de la primera comparacion
+            int result = DateTime.Compare(horadia1, horaDia); // resultado de la primera comparacion las comparaciones nos dan un valor de 1(mas tarde),0 (igual) y -1(mas temprano). 
             int result2 = DateTime.Compare(horadia2, horaDia);// resultado de la segunda comparacion
             int result3= DateTime.Compare(horadia3, horaDia); //resultado de la tercera comparacion
             int result4 = DateTime.Compare(horadia4, horaDia); //resultado de la cuarta comparacion 
