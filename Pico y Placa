@@ -1,0 +1,148 @@
+            string hora1 = "7:00:0"; //hora establecida pico y placa
+            string hora2 = "9:30";   //hora establecida pico y placa
+            string hora3 = "16:00";  //hora establecida pico y placa
+            string hora4 = "19:30";  //hora establecida pico y placa
+            DateTime horadia1 = DateTime.Parse(hora1, System.Globalization.CultureInfo.CurrentCulture); // cambio de variable a tiempo para comparar
+            DateTime horadia2 = DateTime.Parse(hora2, System.Globalization.CultureInfo.CurrentCulture);
+            DateTime horadia3 = DateTime.Parse(hora3, System.Globalization.CultureInfo.CurrentCulture);
+            DateTime horadia4 = DateTime.Parse(hora4, System.Globalization.CultureInfo.CurrentCulture);
+            string fechaIngresada =txtFecha.Text; //string de la fecha ingresada
+            string placa = txtPlaca.Text; //string de la placa ingresada
+            string ultimo = placa.Substring(placa.Length - 1); //se obtiene el ultimo caracter de la placa  ingresada
+            string hora = txtHora.Text; //string de la hora 
+            DateTime horaDia = DateTime.Parse(hora, System.Globalization.CultureInfo.CurrentCulture); //cambio del string de la hora a tiempo se debe mantener un solo contexto
+            string t = horaDia.ToString("HH:mm:ss tt"); //ejemplo de como se ve la hora para usar dentro de una ventana emergente
+            var parsedDate = DateTime.Parse(fechaIngresada); //cambia a datetime la fecha del string se debe usar un solo formato
+            int result = DateTime.Compare(horadia1, horaDia); // resultado de la primera comparacion
+            int result2 = DateTime.Compare(horadia2, horaDia);// resultado de la segunda comparacion
+            int result3= DateTime.Compare(horadia3, horaDia); //resultado de la tercera comparacion
+            int result4 = DateTime.Compare(horadia4, horaDia); //resultado de la cuarta comparacion 
+
+            if (int.Parse(ultimo) == 1 || int.Parse(ultimo) == 2)
+            {
+
+            }if(parsedDate.DayOfWeek.ToString() == "Monday")
+            {
+
+            }if (result < 0 && result2 < 0 && result3 > 0 && result4 > 0)
+            {
+                lblPruebaResultado.Text = "circula";
+
+
+            }
+            else if (result > 0 && result2 > 0 && result3 > 0 && result4 > 0)
+
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result < 0 && result2 < 0 && result3 < 0 && result4 < 0)
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else {
+                lblPruebaResultado.Text = "No circula";
+
+            }
+
+            //Martes
+            if (int.Parse(ultimo) == 3 || int.Parse(ultimo) == 4)
+            {
+
+            }
+            if (parsedDate.DayOfWeek.ToString() == "Tuesday")
+            {
+
+            }
+            if (result < 0 && result2 < 0 && result3 > 0 && result4 > 0)
+            {
+
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result > 0 && result2 > 0 && result3 > 0 && result4 > 0)
+
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result < 0 && result2 < 0 && result3 < 0 && result4 < 0)
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else
+                lblPruebaResultado.Text = "no circula";
+
+            //Miercoles
+            if (int.Parse(ultimo) == 5 || int.Parse(ultimo) == 6)
+            {
+
+            }
+            if (parsedDate.DayOfWeek.ToString() == "Wednesday")
+            {
+
+            }
+            if (result < 0 && result2 < 0 && result3 > 0 && result4 > 0)
+            {
+
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result > 0 && result2 > 0 && result3 > 0 && result4 > 0)
+
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result < 0 && result2 < 0 && result3 < 0 && result4 < 0)
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else
+                lblPruebaResultado.Text = "no circula";
+
+            //Jueves
+            if (int.Parse(ultimo) == 7 || int.Parse(ultimo) == 8)
+            {
+
+            }
+            if (parsedDate.DayOfWeek.ToString() == "Thursday")
+            {
+
+            }
+            if (result < 0 && result2 < 0 && result3 > 0 && result4 > 0)
+            {
+
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result > 0 && result2 > 0 && result3 > 0 && result4 > 0)
+
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result < 0 && result2 < 0 && result3 < 0 && result4 < 0)
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else
+                lblPruebaResultado.Text = "no circula";
+            //Viernes
+            if (int.Parse(ultimo) == 9 || int.Parse(ultimo) == 0)
+            {
+
+            }
+            if (parsedDate.DayOfWeek.ToString() == "Friday")
+            {
+
+            }
+            if (result < 0 && result2 < 0 && result3 > 0 && result4 > 0)
+            {
+
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result > 0 && result2 > 0 && result3 > 0 && result4 > 0)
+
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else if (result < 0 && result2 < 0 && result3 < 0 && result4 < 0)
+            {
+                lblPruebaResultado.Text = "circula";
+            }
+            else
+                lblPruebaResultado.Text = "no circula";
